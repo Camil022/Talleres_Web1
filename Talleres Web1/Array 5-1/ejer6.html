@@ -1,0 +1,32 @@
+/* 6.	Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cual es el primer número, el último, el del centro. */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de un Array</title>
+</head>
+<body>
+    <h1>Elementos del Array</h1>
+    <p>Primer número: <span id="primer-numero"></span></p>
+    <p>Último número: <span id="ultimo-numero"></span></p>
+    <p>Número del centro: <span id="numero-centro"></span></p>
+
+    <script>
+        const arreglo = [3, 5, 9, 10, 35, 42, 12, 22, 25];
+
+        const primerIndice = 0;
+        const ultimoIndice = arreglo.length - 1;
+        const indiceCentro = Math.floor(arreglo.length / 2);
+
+        const primerNumero = arreglo[primerIndice];
+        const ultimoNumero = arreglo[ultimoIndice];
+        const numeroCentro = arreglo[indiceCentro];
+
+        document.getElementById("primer-numero").textContent = primerNumero;
+        document.getElementById("ultimo-numero").textContent = ultimoNumero;
+        document.getElementById("numero-centro").textContent = numeroCentro;
+    </script>
+</body>
+</html>

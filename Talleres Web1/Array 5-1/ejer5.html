@@ -1,0 +1,29 @@
+/* 5.	Cree un array con 3 elementos inicialmente y después agregue 2 elementos más, imprima en html todo los elementos.
+ */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de Elementos</title>
+</head>
+<body>
+    <h1>Elementos del Array</h1>
+    <ul id="elementos-list"></ul>
+
+    <script>
+        let elementos = ["Manzana", "Plátano", "Naranja"];
+
+        elementos.push("Uva", "Pera");
+
+        const elementosListElement = document.getElementById("elementos-list");
+
+        elementos.forEach(elemento => {
+            const listItem = document.createElement("li");
+            listItem.textContent = elemento;
+            elementosListElement.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* 4.	Crea un array con nombres de frutas e imprime los datos en html por medio de un ciclo. */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+</head>
+<body>
+    <h1>Lista de Frutas</h1>
+    <ul id="frutas-list"></ul>
+
+    <script>
+        const frutas = ["Manzana", "Plátano", "Naranja", "Uva", "Pera"];
+
+        const frutasListElement = document.getElementById("frutas-list");
+
+        frutas.forEach(fruta => {
+            const listItem = document.createElement("li");
+            listItem.textContent = fruta;
+            frutasListElement.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

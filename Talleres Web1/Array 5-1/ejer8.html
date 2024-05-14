@@ -1,0 +1,55 @@
+/* 8.	 Del siguiente arreglo [tomate,banano,manzana,pera,cebolla,papa,fresas,Ajo,Sandía] mostrar en html en cual  posición se encuentran las frutas y en cual posición las verduras. */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posiciones de Frutas y Verduras</title>
+</head>
+<body>
+    <h1>Posiciones de Frutas</h1>
+    <ul>
+        <li>Tomate - <span id="tomate"></span></li>
+        <li>Banano - <span id="banano"></span></li>
+        <li>Manzana - <span id="manzana"></span></li>
+        <li>Pera - <span id="pera"></span></li>
+        <li>Fresas - <span id="fresas"></span></li>
+        <li>Sandía - <span id="sandia"></span></li>
+    </ul>
+
+    <h1>Posiciones de Verduras</h1>
+    <ul>
+        <li>Cebolla - <span id="cebolla"></span></li>
+        <li>Papa - <span id="papa"></span></li>
+        <li>Ajo - <span id="ajo"></span></li>
+    </ul>
+
+    <script>
+        const alimentos = ["tomate", "banano", "manzana", "pera", "cebolla", "papa", "fresas", "ajo", "sandía"];
+
+        let frutasPosiciones = [];
+        let verdurasPosiciones = [];
+
+        for (let i = 0; i < alimentos.length; i++) {
+            const alimento = alimentos[i];
+            if (alimento === "tomate" || alimento === "banano" || alimento === "manzana" || alimento === "pera" || alimento === "fresas" || alimento === "sandía") {
+                frutasPosiciones.push(i);
+            } else {
+                verdurasPosiciones.push(i);
+            }
+        }
+
+        document.getElementById("tomate").textContent = frutasPosiciones[0];
+        document.getElementById("banano").textContent = frutasPosiciones[1];
+        document.getElementById("manzana").textContent = frutasPosiciones[2];
+        document.getElementById("pera").textContent = frutasPosiciones[3];
+        document.getElementById("fresas").textContent = frutasPosiciones[4];
+        document.getElementById("sandia").textContent = frutasPosiciones[5];
+
+        document.getElementById("cebolla").textContent = verdurasPosiciones[0];
+        document.getElementById("papa").textContent = verdurasPosiciones[1];
+        document.getElementById("ajo").textContent = verdurasPosiciones[2];
+    </script>
+</body>
+</html>

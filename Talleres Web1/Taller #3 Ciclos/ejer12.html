@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla de Números</title>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    // Solicitar al usuario el número máximo para la tabla
+    let numeroMaximo = Number(prompt("Ingrese el número máximo para la tabla"));
+
+        document.write("<table>");
+
+        for (let i = 1; i <= numeroMaximo; i++) {
+            // Iniciar una nueva fila de la tabla para cada múltiplo de 5
+            if ((i - 1) % 5 === 0) {
+                document.write("<tr>");
+            }
+
+            // Agregar el número a la fila actual de la tabla
+            document.write(`<td>${i}</td>`);
+
+            // Cerrar la fila de la tabla para cada múltiplo de 5 o al final
+            if (i % 5 === 0 || i === numeroMaximo) {
+                document.write("</tr>");
+            }
+        }
+
+        document.write("</table>");
+</script>
+
+</body>
+</html>

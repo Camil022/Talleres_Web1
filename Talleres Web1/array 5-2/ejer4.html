@@ -1,0 +1,22 @@
+<!-- 4.	Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} agregue 2 verduras más y muestre los valores en el navegador. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Valores de un Objeto</title>
+</head>
+<body>
+    <script>
+        let vegetales = { "v1": "tomate", "v2": "Cebolla", "v3": "Ajo" };
+
+        vegetales.v4 = "Zanahoria";
+        vegetales.v5 = "Lechuga";
+
+        for (let key in vegetales) {
+            document.write(vegetales[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 5.	del siguiente objeto { nombre, precio, cantidad} lléne sus valores dinámicamente con mínimo 3 productos y muestre sus datos en el navegador. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Datos de Productos</title>
+</head>
+<body>
+    <script>
+        let productos = [];
+
+        function agregarProducto(nombre, precio, cantidad) {
+            let producto = {
+                nombre: nombre,
+                precio: precio,
+                cantidad: cantidad
+            };
+            productos.push(producto);
+        }
+
+        agregarProducto("Manzana", 1.5, 10);
+        agregarProducto("Plátano", 2, 8);
+        agregarProducto("Naranja", 1, 15);
+
+        document.write("<h2>Datos de los Productos:</h2>");
+        document.write("<ul>");
+        productos.forEach(function(producto) {
+            document.write("<li>Nombre: " + producto.nombre + ", Precio: $" + producto.precio + ", Cantidad: " + producto.cantidad + "</li>");
+        });
+        document.write("</ul>");
+    </script>
+</body>
+</html>

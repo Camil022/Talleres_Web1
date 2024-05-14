@@ -1,0 +1,20 @@
+<!-- 2.	Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} y muestre en el navegador solo las referencias o llaves.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Referencias de un Objeto</title>
+</head>
+<body>
+    <script>
+        let vegetales = { "v1": "tomate", "v2": "Cebolla", "v3": "Ajo" };
+
+        for (let key in vegetales) {
+            document.write(key + "<br>");
+        }
+    </script>
+</body>
+</html>

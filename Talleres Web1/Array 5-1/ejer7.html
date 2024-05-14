@@ -1,0 +1,33 @@
+/* 7.	 Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cuales y cuantos son los números pares y los impares. */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares e Impares</title>
+</head>
+<body>
+    <h1>Números Pares e Impares</h1>
+    <p>Números Pares: <span id="pares"></span></p>
+    <p>Números Impares: <span id="impares"></span></p>
+
+    <script>
+        const numeros = [3, 5, 9, 10, 35, 42, 12, 22, 25];
+
+        let pares = 0;
+        let impares = 0;
+
+        for (let numero of numeros) {
+            if (numero % 2 === 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        document.getElementById("pares").textContent = pares;
+        document.getElementById("impares").textContent = impares;
+    </script>
+</body>
+</html>

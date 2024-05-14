@@ -1,0 +1,27 @@
+/* 9.	Del siguiente arreglo [29,5,40,10,35,42,12,22,25,1,3] mostrar en html los elementos organizados de forma ascendente. */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Ordenados Ascendentemente</title>
+</head>
+<body>
+    <h1>Elementos Ordenados Ascendentemente</h1>
+    <ul id="elementos"></ul>
+
+    <script>
+        const elementos = [29, 5, 40, 10, 35, 42, 12, 22, 25, 1, 3];
+
+        const elementosOrdenados = elementos.sort((a, b) => a - b);
+
+        const listaElementos = document.getElementById("elementos");
+        elementosOrdenados.forEach(elemento => {
+            const itemLista = document.createElement("li");
+            itemLista.textContent = elemento;
+            listaElementos.appendChild(itemLista);
+        });
+    </script>
+</body>
+</html>

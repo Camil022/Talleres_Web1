@@ -1,0 +1,35 @@
+/* 11.	Del siguiente arreglo [2,4,6,8,10,12,14,16,18,20,22] mostrar en html los elementos ordenados aleatoriamente. */
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Ordenados Aleatoriamente</title>
+</head>
+<body>
+    <h1>Elementos Ordenados Aleatoriamente</h1>
+    <ul id="elementos"></ul>
+
+    <script>
+        const elementos = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22];
+
+        function mezclarArreglo(arreglo) {
+            for (let i = arreglo.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arreglo[i], arreglo[j]] = [arreglo[j], arreglo[i]];
+            }
+            return arreglo;
+        }
+
+        const elementosMezclados = mezclarArreglo(elementos);
+
+        const listaElementos = document.getElementById("elementos");
+        elementosMezclados.forEach(elemento => {
+            const itemLista = document.createElement("li");
+            itemLista.textContent = elemento;
+            listaElementos.appendChild(itemLista);
+        });
+    </script>
+</body>
+</html>
