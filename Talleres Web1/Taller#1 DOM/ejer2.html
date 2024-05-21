@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>My name is Donald</h2>
+    <p>I live in Duckburg</p>
+
+    <script>
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'My best friend is Mickey';
+
+        const existingParagraph = document.querySelector('p');
+
+        existingParagraph.parentNode.insertBefore(newParagraph, existingParagraph.nextSibling);
+    </script>
+    
+</body>
+</html>
+
+

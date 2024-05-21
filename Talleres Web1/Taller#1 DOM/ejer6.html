@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ejer6.css">
+</head>
+<body>
+    
+<h2>Listado de quehaceres</h2>
+
+<ol>
+    <li>Desayunar</li>
+    <li>Ir al banco</li>
+    <li>Hacer mercado</li>
+    <li>Preparar almuerzo</li>
+</ol>
+
+<script>
+
+    const newItem = document.createElement('li');
+    newItem.textContent = 'Recoger a los niños';
+
+  
+    const olElement = document.querySelector('ol');
+    const prepararAlmuerzoItem = olElement.querySelector('li:nth-child(4)');
+
+
+    prepararAlmuerzoItem.after(newItem);
+
+
+    const items = olElement.querySelectorAll('li');
+    items[0].classList.add('cumplido'); 
+    items[1].classList.add('fallido'); 
+    items[3].classList.add('cumplido'); 
+    items[4].classList.add('cumplido', 'fallido'); 
+
+</script>
+
+</body>
+</html>
